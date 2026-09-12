@@ -1,1 +1,19 @@
 
+name: Android 16 Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check repository
+        run: |
+          echo "SM-G610F / on7xelte build workspace"
+          find . -maxdepth 3 -type f | sor
+          t
